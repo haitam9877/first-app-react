@@ -9,6 +9,7 @@ function App() {
         <button type="button" className="btn btn-primary">Middle</button>
         <button type="button" className="btn btn-primary">Right</button>
       </div>
+      <h1>Hello Main</h1>
     </div>
   );
 }
