@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World In React</h1>
-      <h2>Hello World I love You</h2>
+      <div className="btn-group" role="group" aria-label="Basic example">
+        <button type="button" className="btn btn-primary">Left</button>
+        <button type="button" className="btn btn-primary">Middle</button>
+        <button type="button" className="btn btn-primary">Right</button>
+      </div>
     </div>
   );
 }
