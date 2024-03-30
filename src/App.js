@@ -1,9 +1,18 @@
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 import './App.css';
+import Header from './Header';
+import Post from './Post';
+import SideMneu from './SideMneu';
 function App() {
   return (
     <div className="App">
-  <h1>hi</h1>
+      <Header />
+
+      <div className='container'>
+        <Post />
+        <SideMneu />
+
+      </div>
     </div>
   );
 }
