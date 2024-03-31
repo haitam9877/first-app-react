@@ -1,19 +1,30 @@
 export default function Post() {
     return (
         <div className="box-post">
-            <PostMain />
-            <PostMain />
-            <PostMain />
-            <PostMain />
+            <PostMain title="El heithem" body="This is the Post Body
+
+">
+                <h2>20</h2>
+            </PostMain>
+            <PostMain title="Hello World" body="This is the Post Body
+
+" />
+            <PostMain title="Post 3" body="This is the Post Body
+
+" />
+       
         </div>
     )
 }
-function PostMain() {
+function PostMain({children,title,body}) {
+
+    //console.log(props)
     return (
         <div className="post">
-            <h2>This is the Post title</h2>
+            {children}
+            <h2>{title}</h2>
             <hr></hr>
-            <p>This is the Post Body</p>
+            <p>{body}</p>
         </div>
     )
 }
