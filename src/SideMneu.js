@@ -2,22 +2,18 @@ export default function SideMneu() {
     return (
         <div className="side-mneu">
             <div className="box-btn">
-
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                <button className="btn">Click Me</button>
-                
+                <Btn />
+                <Btn />
+                <Btn />
+                <Btn />
+                <Btn />
+                <Btn />
+                <Btn />
             </div>
         </div>
     )
+}
+
+function Btn() {
+    return  <button className="btn">Click Me</button>
 }

@@ -8,7 +8,6 @@ export default function Post() {
         </div>
     )
 }
-
 function PostMain() {
     return (
         <div className="post">
