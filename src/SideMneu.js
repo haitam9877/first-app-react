@@ -1,6 +1,5 @@
 
 export default function SideMneu() {
-
     const catigourys = [
         {
             id: 1,
