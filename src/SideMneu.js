@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+
 
 export default function SideMneu() {
     const catigourys = [
@@ -9,9 +11,9 @@ export default function SideMneu() {
         {
             id: 2,
             btnTitle: "الاكثر قراة",
-            cha:    <div>
-                        <img style={{width: "70px"}} src="https://media1.thrillophilia.com/filestore/uwpz857lua13qmvub6um2v93dlrm_IMG%20Worlds%20%20of%20Adventure.jpg" ></img>
-                    </div>
+            cha:<div>
+                <img style={{ width: "70px"}} src="https://media1.thrillophilia.com/filestore/uwpz857lua13qmvub6um2v93dlrm_IMG%20Worlds%20%20of%20Adventure.jpg" />
+                </div>
             
         },
         {
@@ -37,7 +39,8 @@ export default function SideMneu() {
     )
 }
 
-function Btn({btnTitle,children}) {
+function Btn({ btnTitle, children }) {
+   
     return (
         <>
         {btnTitle == null || btnTitle === "" ? <></> : <button className="btn">
