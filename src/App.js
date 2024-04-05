@@ -1,20 +1,14 @@
-
-import './App.css';
-
+import "./App.css";
+import MystatsArry from "./MystatsArry";
+import ShoppingCart from "./ShoppingCart";
 
 function App() {
   return (
     <div className="App">
-
-  
-
-      <h1>heloo</h1>
-
+      {/* <MystatsArry /> */}
+      <ShoppingCart />
     </div>
   );
 }
-
-
-
 
 export default App;
