@@ -1,7 +1,10 @@
+/* eslint-disable no-redeclare */
 /* eslint-disable eqeqeq */
 import { useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Modal from "./Modal";
+import MyInput from "./MyInput";
+import { LoanContexts } from "./ConText/MyInputConText";
 
 export default function TakeALoan() {
   // use State All Forms Input
@@ -41,6 +44,17 @@ export default function TakeALoan() {
     }
   }
 
+  function setValueName(value) {
+    setFormsValue({ ...formsValue, name: value });
+  }
+  function setValuePhone(value) {
+    setFormsValue({ ...formsValue, phone: value });
+  }
+
+  function setValueAge(value) {
+    setFormsValue({ ...formsValue, age: value });
+  }
+
   return (
     <>
       <div
@@ -52,36 +66,36 @@ export default function TakeALoan() {
         }}
       >
         <form className="box-forms">
-          <div className="mb-3">
-            <label className="form-label">Name</label>
-            <input
-              className="form-control"
-              value={formsValue.name}
-              onChange={(e) => {
-                setFormsValue({ ...formsValue, name: e.target.value });
-              }}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Phone Number</label>
-            <input
-              className="form-control"
-              value={formsValue.phone}
-              onChange={(e) => {
-                setFormsValue({ ...formsValue, phone: e.target.value });
-              }}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Age</label>
-            <input
-              className="form-control"
-              value={formsValue.age}
-              onChange={(e) => {
-                setFormsValue({ ...formsValue, age: e.target.value });
-              }}
-            />
-          </div>
+          <LoanContexts.Provider
+            value={{
+              nameTitle: "name:",
+              inputValue: formsValue.name,
+              setValue: setValueName,
+            }}
+          >
+            <MyInput />
+          </LoanContexts.Provider>
+
+          <LoanContexts.Provider
+            value={{
+              nameTitle: "Phone Numbar:",
+              inputValue: formsValue.phone,
+              setValue: setValuePhone,
+            }}
+          >
+            <MyInput />
+          </LoanContexts.Provider>
+
+          <LoanContexts.Provider
+            value={{
+              nameTitle: "age:",
+              inputValue: formsValue.age,
+              setValue: setValueAge,
+            }}
+          >
+            <MyInput />
+          </LoanContexts.Provider>
+
           <div className="mb-3">
             <p>Are You An Employee ?</p>
 
