@@ -1,14 +1,33 @@
-import "./App.css";
-import MystatsArry from "./MystatsArry";
-import ShoppingCart from "./ShoppingCart";
+import { useState } from "react";
+import List from "./List.js";
+import { TestContext } from "./Context.js";
+import Place from "./Place.js";
+import PlaceImage from "./PlaceImage.js";
 
-function App() {
+export default function App() {
+  const [isLarge, setIsLarge] = useState(false);
+  const imageSize = isLarge ? 150 : 100;
   return (
-    <div className="App">
-      {/* <MystatsArry /> */}
-      <ShoppingCart />
-    </div>
+    <>
+      <label>
+        <input
+          type="checkbox"
+          checked={isLarge}
+          onChange={(e) => {
+            setIsLarge(e.target.checked);
+          }}
+        />
+        Utiliser de grandes images
+      </label>
+      <hr />
+
+      <TestContext.Provider
+        value={{
+          imgSize: imageSize,
+        }}
+      >
+        <List />
+      </TestContext.Provider>
+    </>
   );
 }
-
-export default App;
